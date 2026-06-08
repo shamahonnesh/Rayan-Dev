@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<title>Rayan Dev — Spiritual Healer & Psychic Medium UK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --gold-pale: #f5e6b8;
+    --deep: #060912;
+    --dark: #0c1220;
+    --card: #10192e;
+    --card2: #0e1628;
+    --text: #d4c9b0;
+    --text-muted: #8a7f6a;
+    --accent: #7b5ea7;
+    --accent2: #4a3a6b;
+    --white: #f0ead8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: var(--deep);
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── STARS BACKGROUND ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, rgba(201,168,76,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 60%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 10%, rgba(201,168,76,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 40%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 75%, rgba(201,168,76,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 20% 85%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 90%, rgba(201,168,76,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 15%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 45% 50%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 78% 30%, rgba(255,255,255,0.15) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: rgba(12,18,32,0.97);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .topbar a { color: var(--gold-light); text-decoration: none; font-weight: 600; }
+  .topbar a:hover { color: var(--white); }
+
+  /* ── NAV ── */
+  nav {
+    background: rgba(6,9,18,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 70px;
+    position: sticky;
+    top: 40px;
+    z-index: 999;
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 17px;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--white); }
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), var(--accent));
+    color: var(--deep) !important;
+    padding: 10px 22px;
+    border-radius: 2px;
+    font-family: 'Cinzel', serif !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em;
+    font-weight: 700 !important;
+    text-decoration: none;
+    transition: opacity 0.3s, transform 0.2s;
+  }
+
+  .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); color: var(--deep) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(123,94,167,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 80% at 20% 80%, rgba(201,168,76,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 20%, rgba(74,58,107,0.15) 0%, transparent 60%);
+  }
+
+  /* Mystical circle */
+  .hero-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(201,168,76,0.12);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateSlow 40s linear infinite;
+  }
+
+  .hero-circle::before {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(201,168,76,0.08);
+    border-radius: 50%;
+    border-top-color: rgba(201,168,76,0.25);
+    animation: rotateSlow 20s linear infinite reverse;
+  }
+
+  .hero-circle::after {
+    content: '';
+    position: absolute;
+    inset: 40px;
+    border: 1px dashed rgba(201,168,76,0.06);
+    border-radius: 50%;
+  }
+
+  @keyframes rotateSlow { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+  .hero-content { position: relative; z-index: 2; max-width: 800px; }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before,
+  .hero-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .hero h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(28px, 5vw, 58px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 60px rgba(201,168,76,0.2);
+  }
+
+  .hero h1 span { color: var(--gold); }
+
+  .hero-sub {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(14px, 2vw, 19px);
+    color: var(--gold-pale);
+    letter-spacing: 0.06em;
+    margin-bottom: 24px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    color: var(--text);
+    max-width: 620px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    font-style: italic;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold) 0%, #a8722a 100%);
+    color: var(--deep);
+    padding: 16px 36px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    border-radius: 2px;
+    transition: all 0.3s;
+    box-shadow: 0 8px 30px rgba(201,168,76,0.25);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(201,168,76,0.4);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--gold);
+    padding: 16px 36px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 2px;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(201,168,76,0.08);
+    border-color: var(--gold);
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(201,168,76,0.12);
+  }
+
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 60px 40px 20px;
+    opacity: 0.3;
+  }
+
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold));
+  }
+
+  .divider::after { background: linear-gradient(to left, transparent, var(--gold)); }
+
+  .divider-symbol {
+    font-size: 20px;
+    color: var(--gold);
+  }
+
+  /* ── STATS ── */
+  .stats-section {
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .stat {
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+  }
+
+  .stat::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgba(201,168,76,0.15);
+  }
+
+  .stat:last-child::after { display: none; }
+
+  .stat-number {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 36px;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    text-align: center;
+    padding: 80px 20px 50px;
+  }
+
+  .section-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .section-tag::before, .section-tag::after {
+    content: '✦';
+    font-size: 8px;
+    opacity: 0.5;
+  }
+
+  .section-header h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(22px, 3.5vw, 38px);
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .section-header p {
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 17px;
+  }
+
+  /* ── RESONANCE BLOCK ── */
+  .resonance-section {
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .resonance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .resonance-item {
+    background: var(--card);
+    padding: 36px 30px;
+    border: 1px solid rgba(201,168,76,0.08);
+    transition: border-color 0.3s, background 0.3s;
+    cursor: default;
+  }
+
+  .resonance-item:hover {
+    border-color: rgba(201,168,76,0.3);
+    background: var(--card2);
+  }
+
+  .resonance-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .resonance-item h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--gold-pale);
+    margin-bottom: 10px;
+  }
+
+  .resonance-item p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── SERVICES ── */
+  .services-section {
+    padding: 40px 40px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 3px;
+    background: var(--card);
+    border: 1px solid rgba(201,168,76,0.08);
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .service-card:hover { border-color: rgba(201,168,76,0.25); }
+
+  .service-card.reverse { direction: rtl; }
+  .service-card.reverse > * { direction: ltr; }
+
+  .service-img {
+    height: 320px;
+    background: var(--accent2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(201,168,76,0.1) 0%, var(--accent2) 70%);
+  }
+
+  .service-img-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    background: rgba(6,9,18,0.7);
+    padding: 6px 12px;
+    border: 1px solid rgba(201,168,76,0.2);
+    text-transform: uppercase;
+  }
+
+  .service-body {
+    padding: 50px 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .service-body h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  .service-body p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .service-link {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s;
+  }
+
+  .service-link:hover { gap: 14px; }
+
+  /* ── PROCESS ── */
+  .process-section {
+    padding: 40px 40px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .step {
+    background: var(--card);
+    padding: 40px 28px;
+    border: 1px solid rgba(201,168,76,0.08);
+    text-align: center;
+    transition: border-color 0.3s;
+  }
+
+  .step:hover { border-color: rgba(201,168,76,0.25); }
+
+  .step-number {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 40px;
+    color: rgba(201,168,76,0.15);
+    display: block;
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+
+  .step h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: var(--gold-pale);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .step p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── ABOUT ── */
+  .about-section {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .about-portrait {
+    position: relative;
+  }
+
+  .portrait-frame {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: linear-gradient(160deg, var(--accent2) 0%, #1a0f30 60%, var(--card) 100%);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portrait-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 60%, rgba(123,94,167,0.15) 0%, transparent 70%);
+  }
+
+  .portrait-rating {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--deep);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .portrait-rating .stars { color: var(--gold); font-size: 14px; }
+
+  .portrait-rating .score {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 24px;
+    color: var(--white);
+    display: block;
+  }
+
+  .portrait-rating .label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .about-text h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(20px, 2.8vw, 32px);
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.35;
+  }
+
+  .about-text p {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .about-quote {
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+    margin: 28px 0;
+    font-size: 17px;
+    color: var(--gold-pale);
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section {
+    padding: 40px 40px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .testimonial {
+    background: var(--card);
+    padding: 36px 30px;
+    border: 1px solid rgba(201,168,76,0.07);
+    transition: border-color 0.3s;
+  }
+
+  .testimonial:hover { border-color: rgba(201,168,76,0.22); }
+
+  .testimonial .stars { color: var(--gold); font-size: 13px; margin-bottom: 16px; }
+
+  .testimonial p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+  }
+
+  .testimonial-meta {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 100px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 50%, rgba(123,94,167,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 60%);
+  }
+
+  .cta-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+
+  .cta-section h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(22px, 3.5vw, 38px);
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.3;
+  }
+
+  .cta-section p {
+    font-size: 17px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  /* ── CONTACT FORM ── */
+  .contact-section {
+    padding: 80px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group.full { grid-column: 1 / -1; }
+
+  .form-group label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--card);
+    border: 1px solid rgba(201,168,76,0.15);
+    color: var(--white);
+    padding: 14px 16px;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: rgba(201,168,76,0.5);
+  }
+
+  .form-group select option { background: var(--dark); }
+
+  .form-group textarea { height: 130px; resize: vertical; }
+
+  .form-submit {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, var(--gold), #9a6820);
+    color: var(--deep);
+    border: none;
+    padding: 18px 40px;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+    width: 100%;
+  }
+
+  .form-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  .form-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    font-style: italic;
+  }
+
+  /* ── FAQ ── */
+  .faq-section {
+    padding: 40px 40px 80px;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+  }
+
+  .faq-q {
+    padding: 22px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    color: var(--gold-pale);
+    letter-spacing: 0.04em;
+    user-select: none;
+  }
+
+  .faq-q:hover { color: var(--white); }
+
+  .faq-icon {
+    color: var(--gold);
+    font-size: 18px;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-style: italic;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding-bottom: 22px;
+  }
+
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid rgba(201,168,76,0.12);
+    padding: 60px 40px 30px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 20px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .footer-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-contact {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .footer-contact a {
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    transition: color 0.3s;
+  }
+
+  .footer-contact a:hover { color: var(--white); }
+
+  .footer-copy {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.08em;
+    border-top: 1px solid rgba(201,168,76,0.08);
+    padding-top: 24px;
+    margin-top: 10px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .stats-section { grid-template-columns: repeat(2, 1fr); }
+    .resonance-grid { grid-template-columns: 1fr; }
+    .service-card { grid-template-columns: 1fr; }
+    .service-card.reverse { direction: ltr; }
+    .service-img { height: 220px; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .about-inner { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .hero-circle { width: 300px; height: 300px; }
+    .services-section, .process-section, .testimonials-section,
+    .resonance-section, .faq-section, .contact-section { padding-left: 20px; padding-right: 20px; }
+    .about-section { padding: 40px 20px; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content { animation: fadeUp 1s ease 0.2s both; }
+  .hero-eyebrow { animation: fadeUp 1s ease 0s both; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  📍 223 Camden High St, London NW1 7BU &nbsp;·&nbsp;
+  <a href="tel:+447380450702">📞 Call Rayan Dev — +447380450702</a>
+  &nbsp;·&nbsp; Available 7 Days a Week &nbsp;·&nbsp; Absolute Confidentiality Guaranteed
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Rayan <span>Dev</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:+447380450702" class="nav-cta">📞 Book Consultation</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-circle"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Spiritual Healer & Psychic Medium — United Kingdom</div>
+    <h1>When the Path is <span>Hidden</span>,<br/>I Illuminate It</h1>
+    <p class="hero-sub">London · Birmingham · Manchester · Remote Worldwide</p>
+    <p>Rayan Dev is a gifted spiritual healer with over 20 years of experience in sacred geomancy, affective rituals, and energy restoration. Whether you face love struggles, unexplained blockages, or seek clarity — a confidential consultation is your first step toward resolution.</p>
+    <div class="hero-btns">
+      <a href="tel:+447380450702" class="btn-primary">📞 Call Rayan Dev</a>
+      <a href="https://wa.me/447380450702?text=Hello%20Rayan%20Dev%2C%20I%27d%20like%20to%20book%20a%20consultation." class="btn-secondary" target="_blank">💬 WhatsApp</a>
+    </div>
+    <div class="hero-badges">
+      <span class="badge"><span class="badge-dot"></span> 20+ Years Experience</span>
+      <span class="badge"><span class="badge-dot"></span> Absolute Confidentiality</span>
+      <span class="badge"><span class="badge-dot"></span> 7 Days a Week</span>
+      <span class="badge"><span class="badge-dot"></span> Remote Worldwide</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div style="max-width:900px;margin:0 auto;">
+  <div style="height:1px;background:linear-gradient(to right, transparent, rgba(201,168,76,0.2), transparent);"></div>
+</div>
+<div class="stats-section">
+  <div class="stat"><span class="stat-number">20+</span><span class="stat-label">Years of Mastery</span></div>
+  <div class="stat"><span class="stat-number">30+</span><span class="stat-label">Countries Served</span></div>
+  <div class="stat"><span class="stat-number">5K+</span><span class="stat-label">Souls Guided</span></div>
+  <div class="stat"><span class="stat-number">24h</span><span class="stat-label">Response Time</span></div>
+</div>
+
+<!-- RESONANCE -->
+<div class="section-header">
+  <div class="section-tag">Does This Resonate With You</div>
+  <h2>Signs You May Need Spiritual Guidance</h2>
+  <p>These situations rarely resolve on their own. Understanding what is truly occurring is the first step.</p>
+</div>
+<div class="resonance-section">
+  <div class="resonance-grid">
+    <div class="resonance-item">
+      <span class="resonance-icon">💔</span>
+      <h3>Love & Relationships Slipping Away</h3>
+      <p>Your relationship is deteriorating despite every effort — distance growing, communication failing, the connection fading without explanation.</p>
+    </div>
+    <div class="resonance-item">
+      <span class="resonance-icon">🌑</span>
+      <h3>Persistent Negative Energy</h3>
+      <p>You feel watched, drained, or followed by continuous misfortune. Recurring dreams, unexplained fatigue, or a sense of oppression.</p>
+    </div>
+    <div class="resonance-item">
+      <span class="resonance-icon">🚪</span>
+      <h3>Blocked in Love, Business or Family</h3>
+      <p>Every door closes for no clear reason. Money does not stay. Family rifts deepen. Success remains just out of reach, no matter what you do.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="section-header">
+  <div class="section-tag">Spiritual Services</div>
+  <h2>Sacred Solutions Rooted in<br/>Ancient Tradition</h2>
+  <p>Each consultation is personalised. No two cases are treated the same — every soul carries a unique path.</p>
+</div>
+
+<div class="services-section">
+
+  <div class="service-card">
+    <div class="service-img" style="background:linear-gradient(160deg,#2a1040,#0e1628);">
+      <span style="position:relative;z-index:2;font-size:70px;">🌹</span>
+      <span class="service-img-label">Love & Relationships</span>
+    </div>
+    <div class="service-body">
+      <h3>Reuniting Loved Ones & Restoring Harmony</h3>
+      <p>They have moved on. Calls go unanswered. The bond you once shared feels severed. This is one of the most delicate situations — and the most common Rayan Dev is called upon to address.</p>
+      <p>Using sacred geomancy and finely tuned affective rituals, Rayan Dev works on the energetic connection between two people — across any distance. Includes stopping a divorce, ending infidelity, and restoring marital peace.</p>
+      <a href="tel:+447380450702" class="service-link">Discuss My Situation →</a>
+    </div>
+  </div>
+
+  <div class="service-card reverse">
+    <div class="service-img" style="background:linear-gradient(160deg,#0d2040,#0e1628);">
+      <span style="position:relative;z-index:2;font-size:70px;">🔮</span>
+      <span class="service-img-label" style="left:auto;right:20px;">Spiritual Healing</span>
+    </div>
+    <div class="service-body">
+      <h3>Negative Energy Removal, Ruqyah & Curse Breaking</h3>
+      <p>Persistent misfortune. Unexplained fatigue. The feeling of being watched or spiritually oppressed. Recurring nightmares. These may be signs of malevolent spiritual forces.</p>
+      <p>Rayan Dev addresses spiritual sources at all levels — removing malevolent presences, breaking generational curses, and offering Ruqyah cleansing for clients of Islamic faith. A perceptible shift is commonly reported within days.</p>
+      <a href="tel:+447380450702" class="service-link">Discuss My Situation →</a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="service-img" style="background:linear-gradient(160deg,#1a2a0d,#0e1628);">
+      <span style="position:relative;z-index:2;font-size:70px;">💎</span>
+      <span class="service-img-label">Business & Prosperity</span>
+    </div>
+    <div class="service-body">
+      <h3>Money Rituals, Business Success & Court Cases</h3>
+      <p>Every soul is born with a fortune. Sometimes spiritual obstacles prevent it from manifesting — despite talent, effort, and hard work. When doors keep closing without clear reason, a spiritual assessment is necessary.</p>
+      <p>Rayan Dev also assists with court cases, using expertise to influence the spiritual energy around all parties. Attraction rituals make your presence magnetic in business, professional, and personal environments.</p>
+      <a href="tel:+447380450702" class="service-link">Discuss My Situation →</a>
+    </div>
+  </div>
+
+  <div class="service-card reverse">
+    <div class="service-img" style="background:linear-gradient(160deg,#2a200d,#0e1628);">
+      <span style="position:relative;z-index:2;font-size:70px;">🌙</span>
+      <span class="service-img-label" style="left:auto;right:20px;">Readings & Guidance</span>
+    </div>
+    <div class="service-body">
+      <h3>Psychic Readings, Palm Reading & Istikhara</h3>
+      <p>You sense something is wrong but cannot name it. You face a major decision — a relationship, a move, a career — and need clarity before committing. Rayan Dev's readings offer insight into your trajectory and the forces at work around you.</p>
+      <p>For Muslim clients, Istikhara consultations are offered with full respect for Islamic tradition. All readings are conducted with complete discretion and without judgment.</p>
+      <a href="tel:+447380450702" class="service-link">Book a Reading →</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- PROCESS -->
+<div class="section-header" style="padding-top:20px;">
+  <div class="section-tag">How It Works</div>
+  <h2>Your Journey to Resolution</h2>
+</div>
+<div class="process-section">
+  <div class="process-steps">
+    <div class="step">
+      <span class="step-number">01</span>
+      <h3>Make Contact</h3>
+      <p>Call or WhatsApp to describe your situation briefly. All enquiries are strictly confidential and without obligation.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">02</span>
+      <h3>Initial Assessment</h3>
+      <p>Rayan Dev evaluates your case using geomancy and 20 years of spiritual expertise. No two cases are treated the same.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">03</span>
+      <h3>Tailored Solution</h3>
+      <p>A personalised ritual or spiritual intervention is designed specifically for your unique situation — love, protection, business, or clarity.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">04</span>
+      <h3>Follow-Up & Results</h3>
+      <p>Rayan Dev monitors progress and remains available to refine the approach. First signs typically observed within days to weeks.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" style="height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,0.12),transparent);max-width:900px;margin:0 auto;"></div>
+<div class="about-section">
+  <div class="about-inner">
+    <div class="about-portrait">
+      <div class="portrait-frame">
+        <span style="position:relative;z-index:2;font-size:90px;">🧿</span>
+      </div>
+      <div class="portrait-rating">
+        <div class="stars">★★★★★</div>
+        <span class="score">4.9</span>
+        <div class="label">Google Reviews</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-tag" style="justify-content:flex-start;">About Rayan Dev</div>
+      <h2>A Legacy of Spiritual Knowledge & Healing</h2>
+      <p>Rayan Dev is a gifted spiritual healer and psychic medium with deep roots in the sacred traditions of geomancy, Istikhara, and affective spiritual arrangements. Initiated by the masters of his tradition, he has spent over two decades refining his practice — guiding thousands across the UK and internationally through crises where all other paths had failed.</p>
+      <p>Based across London, Birmingham, and Manchester, Rayan Dev operates with absolute discretion. His approach is systematic, professional, and grounded in positive energy only — every resolution is designed to leave all parties in a better place. Distance is never an obstacle; remote consultations serve clients worldwide.</p>
+      <blockquote class="about-quote">
+        "My purpose is not to judge your situation — it is to understand it, and to help you move forward with clarity and peace."
+      </blockquote>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+        <a href="tel:+447380450702" class="btn-primary" style="font-size:12px;padding:13px 26px;">📞 +447380450702</a>
+        <a href="mailto:rayandev36@gmail.com" class="btn-secondary" style="font-size:12px;padding:13px 26px;">✉ Email Rayan Dev</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div id="testimonials" class="section-header">
+  <div class="section-tag">Client Testimonials</div>
+  <h2>Words From Those Who Found Resolution</h2>
+</div>
+<div class="testimonials-section">
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>I wasn't sure what to expect. My relationship had been falling apart for over a year and nothing worked. A friend recommended Rayan Dev. Within three weeks something had genuinely shifted — my partner reached out. I still can't explain it, but I'm grateful.</p>
+      <div class="testimonial-author">Sarah M.</div>
+      <div class="testimonial-meta">London · ✓ Verified Review</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>I had a court case that had been dragging on for two years. I was sceptical. Rayan Dev was clear and made no promises he couldn't keep. The case resolved in my favour six weeks later. I've referred three family members since.</p>
+      <div class="testimonial-author">David O.</div>
+      <div class="testimonial-meta">Birmingham · ✓ Verified Review</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>Family conflicts had been going on for years. After speaking with Rayan Dev, things began to slowly change. My mother and sister reconciled after four years of silence. I cannot explain it — but I'm deeply thankful.</p>
+      <div class="testimonial-author">Layla K.</div>
+      <div class="testimonial-meta">Manchester · ✓ Verified Review</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>I had been feeling drained for months. Constant bad luck, no energy, nothing going right. Rayan Dev identified the cause immediately and performed a cleansing. Two weeks later I felt like myself again. It sounds strange — but it is completely true.</p>
+      <div class="testimonial-author">Aisha T.</div>
+      <div class="testimonial-meta">London · ✓ Verified Review</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>My business had stalled for eighteen months despite doing everything right. I was hesitant to call, but I'm so glad I did. Things began turning around within a month — not overnight, but steadily and noticeably.</p>
+      <div class="testimonial-author">James F.</div>
+      <div class="testimonial-meta">Birmingham · ✓ Verified Review</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>Rayan Dev gave me an Istikhara reading when I faced a major life decision. He was calm, measured, and honest. He did not tell me what I wanted to hear — he told me what I needed to hear. That kind of honesty is rare and deeply valuable.</p>
+      <div class="testimonial-author">Fatima B.</div>
+      <div class="testimonial-meta">Manchester · ✓ Verified Review</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-section">
+  <div class="cta-content">
+    <div class="section-tag">Act Now</div>
+    <h2>Your Situation Deserves<br/>a Serious Answer</h2>
+    <p>Most people wait too long. The longer a spiritual situation remains unaddressed, the more deeply it takes root. Contact Rayan Dev today — confidentially, with no obligation — and discover what is truly happening.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="tel:+447380450702" class="btn-primary">📞 Call Rayan Dev — +447380450702</a>
+      <a href="https://wa.me/447380450702" target="_blank" class="btn-secondary">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT FORM -->
+<div id="contact" class="section-header">
+  <div class="section-tag">Book a Consultation</div>
+  <h2>Begin Your Path to Clarity</h2>
+  <p>Complete the form and Rayan Dev's team will respond within 24 hours.</p>
+</div>
+
+<div class="contact-section">
+  <div class="form-grid">
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Your full name"/>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="your@email.com"/>
+    </div>
+    <div class="form-group">
+      <label>Phone / WhatsApp</label>
+      <input type="tel" placeholder="+44 ..."/>
+    </div>
+    <div class="form-group">
+      <label>Location (City / Country)</label>
+      <input type="text" placeholder="London, UK"/>
+    </div>
+    <div class="form-group full">
+      <label>Service Required</label>
+      <select>
+        <option value="">— Select a Service —</option>
+        <option>Love & Relationship Guidance</option>
+        <option>Negative Energy Removal / Ruqyah</option>
+        <option>Business, Money & Prosperity</option>
+        <option>Psychic Reading / Palm Reading</option>
+        <option>Istikhara Consultation</option>
+        <option>Court Case Assistance</option>
+        <option>Family Dispute Resolution</option>
+        <option>Other / Not Sure</option>
+      </select>
+    </div>
+    <div class="form-group full">
+      <label>How Long Has This Been Going On?</label>
+      <select>
+        <option value="">— Select Duration —</option>
+        <option>Less than a month</option>
+        <option>1–3 months</option>
+        <option>3–6 months</option>
+        <option>6 months to 1 year</option>
+        <option>More than a year</option>
+      </select>
+    </div>
+    <div class="form-group full">
+      <label>Briefly Describe Your Situation</label>
+      <textarea placeholder="Share as much or as little as you are comfortable with. Everything is strictly confidential."></textarea>
+    </div>
+    <div class="form-group full">
+      <button class="form-submit" onclick="alert('Thank you. Rayan Dev\'s team will contact you within 24 hours.')">✦ Request My Consultation ✦</button>
+    </div>
+  </div>
+  <p class="form-note">🔒 Your information is kept in absolute confidence. Response guaranteed within 24 hours.</p>
+</div>
+
+<!-- FAQ -->
+<div class="section-header">
+  <div class="section-tag">Frequently Asked Questions</div>
+  <h2>Common Questions</h2>
+</div>
+<div class="faq-section">
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">What services does Rayan Dev offer? <span class="faq-icon">+</span></div>
+    <div class="faq-a">Rayan Dev specialises in love and relationship guidance (including reuniting separated partners), spiritual cleansing and Ruqyah, negative energy and generational curse removal, psychic and palm readings, Istikhara consultations, business and money rituals, court case assistance, family dispute resolution, and attraction rituals. Every case is assessed individually.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Can Rayan Dev help if I am not based in London? <span class="faq-icon">+</span></div>
+    <div class="faq-a">Yes. Rayan Dev works with clients across Birmingham, Manchester, and the wider UK, as well as internationally. All consultations and interventions can be conducted remotely — your location is never an obstacle.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">How long does it take to see results? <span class="faq-icon">+</span></div>
+    <div class="faq-a">This depends on the nature and depth of your situation. Simple cases may see a perceptible shift within days. More complex or long-standing situations may require several weeks. Rayan Dev is transparent about expected timelines during the initial assessment.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Is everything I share kept confidential? <span class="faq-icon">+</span></div>
+    <div class="faq-a">Absolutely. Rayan Dev operates with complete discretion and professional confidentiality. Nothing you share is ever disclosed to any third party. Your privacy is sacred.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Can Rayan Dev help clients of Islamic faith? <span class="faq-icon">+</span></div>
+    <div class="faq-a">Yes. Rayan Dev offers Ruqyah cleansing and Istikhara consultations with full respect for Islamic tradition and practice. These services are available to Muslim clients worldwide.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">How do I get started? <span class="faq-icon">+</span></div>
+    <div class="faq-a">The simplest way is to call or WhatsApp Rayan Dev directly at +447380450702. You can also email rayandev36@gmail.com or complete the consultation form on this page. There is no obligation, and the initial contact is completely free.</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Rayan Dev</span>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-contact">
+    <a href="tel:+447380450702">📞 +447380450702</a>
+    <a href="mailto:rayandev36@gmail.com">✉ rayandev36@gmail.com</a>
+    <a href="https://wa.me/447380450702" target="_blank">💬 WhatsApp</a>
+    <a href="https://maps.google.com/?q=223+Camden+High+St,+London+NW1+7BU" target="_blank">📍 223 Camden High St, London NW1 7BU</a>
+  </div>
+  <div class="footer-copy">
+    © 2026 Rayan Dev — Spiritual Healer & Psychic Medium · London · Birmingham · Manchester · Worldwide
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
